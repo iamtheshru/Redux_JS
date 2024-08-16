@@ -6,6 +6,7 @@ import Admin from "../CommonCompo/Admin.jsx";
 import Edituser from "../CommonCompo/Admin/Edituser.jsx";
 import React, { Suspense } from "react";
 
+// const AdminRoute = React.lazy(() => { return import('./AdminRouter.jsx') })
 const Mainroute = createBrowserRouter([
     {
         path: "/",
@@ -43,5 +44,12 @@ const Mainroute = createBrowserRouter([
             <Edituser />
         </>,
     }
+    // {
+    //     path: "/admin/*",
+    //     element: <>
+    //         <Suspense fallback={<h2>Loading....</h2>}><AdminRoute /></Suspense>
+    //     </>,
+
+    // }
 ])
 export default Mainroute;

@@ -1,4 +1,4 @@
-import { ADD_ITEM, DELETE_ITEM } from "../actionTypes/actionTypes";
+import { ADD_ITEM, DELETE_ITEM } from "../actionTypes/actionTypes.js";
 
 const initialState = {
     numOfItems: 0,

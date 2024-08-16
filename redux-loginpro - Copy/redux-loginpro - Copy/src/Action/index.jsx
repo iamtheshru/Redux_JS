@@ -6,6 +6,7 @@ import axios from "axios";
 // export const useFetchProducts = () => {
 // const navigate = useNavigate();
 export const fetchProducts = (name, password, navigate) => {
+    // console.log("action", name, password);
     return async (dispatch) => {
         try {
             const response = await axios.get(`http://localhost:5000/posts?name=${name}&password=${password}`)
@@ -15,6 +16,7 @@ export const fetchProducts = (name, password, navigate) => {
                 if (response.data[0].role === "1") {
                     navigate("/admin");
                     console.log("bbb");
+                    // console.log(response.data[0].role);
                 } else {
                     navigate("/");
                     console.log("aaa");
